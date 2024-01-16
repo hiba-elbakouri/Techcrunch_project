@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>TechCrunch Articles Dashboard</title>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1>TechCrunch Articles</h1>
+      <table class="table mt-3">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Category</th>
+            <th>Title</th>
+            <th>URL</th>
+            <th>Timestamp</th>
+            <th>Image</th> 
+            <th>Authors</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in data %}
+            <tr>
+              <td>{{ row[0] }}</td>
+              <td>{{ row[1] }}</td>
+              <td>{{ row[2] }}</td>
+              <td><a href="{{ row[3] }}">Link</a></td>
+              <td>{{ row[4] }}</td>
+
+              <td><img src="{{ row[5] }}" alt="Article Image" style="max-width: 100px; max-height: 100px;"></td>
+              <td>{{ row[6] }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
