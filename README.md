@@ -18,4 +18,5 @@ created in the root project folder. To access the dashboard access the link
 
 ## Authors
 
-* **Hiba Elbakouri** - *Data engineer intern*
+* **Hiba Elbakouri** - *Data engineer*
+
